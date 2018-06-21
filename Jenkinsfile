@@ -20,3 +20,9 @@ stage 'Script'
    }
   }
  }
+
+stage 'Cria e Valida Arquivo'
+ node('master') {
+  sh 'echo "Os lábios da sabedoria estão fechados, exceto aos ouvidos do entendimento." > Trismegisto.txt'
+  fileExists 'Trismegisto.txt'
+ }
