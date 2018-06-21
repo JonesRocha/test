@@ -24,5 +24,9 @@ stage 'Script'
 stage 'Cria e Valida Arquivo'
  node('master') {
   sh 'echo "Os lábios da sabedoria estão fechados, exceto aos ouvidos do entendimento." > Trismegisto.txt'
+  sh 'git add Trismegisto.txt'
+  sh 'git commit -m "outro passo"'
+  sh 'git commit -m "outro passo"'
+  sh 'git push'
   fileExists 'Trismegisto.txt'
  }
