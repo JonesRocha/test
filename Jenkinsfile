@@ -3,3 +3,5 @@ stage 'Checkout'
   deleteDir()
   checkout scm
  }
+
+fileExists 'contributors.txt'
