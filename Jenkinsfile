@@ -24,6 +24,7 @@ stage 'Script'
 stage 'Cria e Valida Arquivo'
  node('master') {
   sh 'echo "Os lábios da sabedoria estão fechados, exceto aos ouvidos do entendimento." > Trismegisto.txt'
+  sh 'git checkout master'
   sh 'git add Trismegisto.txt'
   sh 'git config --global user.email "jones_rocha@yahoo.com.br"'
   sh 'git config --global user.name "JonesRocha"'
