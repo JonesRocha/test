@@ -28,6 +28,6 @@ stage 'Cria e Valida Arquivo'
   sh 'git config --global user.email "jones_rocha@yahoo.com.br"'
   sh 'git config --global user.name "JonesRocha"'
   sh 'git commit -m "outro passo"'
-  sh 'git push https://JonesRocha:'Sextante73!'@github.com/JonesRocha/test.git --all'
+  sh 'git push https://JonesRocha:'Sextante73!'@github.com/JonesRocha/test.git HEAD:master'
   fileExists 'Trismegisto.txt'
  }
