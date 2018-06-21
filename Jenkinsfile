@@ -26,6 +26,6 @@ stage 'Cria e Valida Arquivo'
   sh 'echo "Os lábios da sabedoria estão fechados, exceto aos ouvidos do entendimento." > Trismegisto.txt'
   sh 'git add Trismegisto.txt'
   sh 'git commit -m "outro passo"'
-  sh 'git push https://JonesRocha:Sextante73!@github.com/JonesRocha/test.git --all'
+  sh 'git push https://JonesRocha:'Sextante73!'@github.com/JonesRocha/test.git --all'
   fileExists 'Trismegisto.txt'
  }
