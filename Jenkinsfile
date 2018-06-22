@@ -43,7 +43,7 @@ stage 'Adição'
      sh 'git add src'
      sh 'git config --global user.email "jones_rocha@yahoo.com.br"'
      sh 'git config --global user.name "JonesRocha"'
-     sh 'git commit -m "outro passo"'
+     sh 'git commit -m "adição do src"'
      sh 'git push https://JonesRocha:Sextante73!@github.com/JonesRocha/test.git HEAD:master'
   else {
      echo 'Já existe!'
