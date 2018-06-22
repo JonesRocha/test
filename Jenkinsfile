@@ -24,7 +24,7 @@ stage 'Script'
 
 stage 'Cria e Valida Arquivo'
  node('master') {
-  if (!ileExists('Trismegisto.txt')) {
+  if (fileExists('Trismegisto.txt')) {
      echo 'Já existe!'
   } else {
      sh 'echo "Os lábios da sabedoria estão fechados, exceto aos ouvidos do entendimento." > Trismegisto.txt'
