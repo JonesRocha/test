@@ -57,6 +57,5 @@ stage 'Mensagem'
   println("Códigos em groove...")
   for (int i = 0; i <= 13; ++i) {
     println("Contando... " + i)
-    Thread.sleep(i)
   }
  }
