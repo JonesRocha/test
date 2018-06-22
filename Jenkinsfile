@@ -1,5 +1,6 @@
 stage 'Checkout'
  node('master') {
+  echo 'Iniciando...'
   deleteDir()
   checkout scm
   fileExists 'testeDeArquivo.txt'
@@ -23,7 +24,9 @@ stage 'Script'
 
 stage 'Cria e Valida Arquivo'
  node('master') {
-  if (!fileExists('Trismegisto.txt')) {
+  if (fileExists('Trismegisto.txt')) {
+     echo 'Já existe!'
+  } else {
      sh 'echo "Os lábios da sabedoria estão fechados, exceto aos ouvidos do entendimento." > Trismegisto.txt'
      sh 'git checkout master'
      sh 'git add Trismegisto.txt'
@@ -31,22 +34,20 @@ stage 'Cria e Valida Arquivo'
      sh 'git config --global user.name "JonesRocha"'
      sh 'git commit -m "outro passo"'
      sh 'git push https://JonesRocha:Sextante73!@github.com/JonesRocha/test.git HEAD:master'
-  else {
-     echo 'Já existe!'
   }
  }
 
 stage 'Adição'
  node('master') {
-  if (!fileExists('src')) {
+  if (fileExists('src')) {
+     echo 'Já existe!'
+  } else {
      sh 'git checkout master'
      sh 'git add src'
      sh 'git config --global user.email "jones_rocha@yahoo.com.br"'
      sh 'git config --global user.name "JonesRocha"'
-     sh 'git commit -m "outro passo"'
+     sh 'git commit -m "adição do src"'
      sh 'git push https://JonesRocha:Sextante73!@github.com/JonesRocha/test.git HEAD:master'
-  else {
-     echo 'Já existe!'
   }
  }
 
