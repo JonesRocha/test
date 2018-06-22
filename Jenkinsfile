@@ -55,9 +55,7 @@ stage 'Mensagem'
  node('master') {
   echo 'Aqui finaliza por enquanto.'
   println("Códigos em groove...")
-  int i = 1
-  while (i <= 9) {
-  for (int i = 0; i <= 13; ++i) {
+  for (int i = 1; i <= 9; ++i) {
     println("Contando... " + i)
   }
  }
