@@ -59,5 +59,6 @@ stage 'Mensagem'
   while (i <= 13) {
     println("Contando... " + i)
     Thread.sleep(i)
+    i += 1
   }
  }
