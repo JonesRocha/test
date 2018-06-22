@@ -49,3 +49,8 @@ stage 'Adição'
      echo 'Já existe!'
   }
  }
+
+stage 'Mensagem'
+ node('master') {
+  echo 'Aqui finaliza por enquanto.'
+ }
