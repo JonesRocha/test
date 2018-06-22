@@ -55,10 +55,15 @@ stage 'Mensagem'
  node('master') {
   echo 'Aqui finaliza por enquanto.'
   println("Códigos em groove...")
-  int i = 0
-  while (i <= 13) {
+  int i = 1
+  while (i <= 9) {
     println("Contando... " + i)
     Thread.sleep(i)
     i += 1
   }
+ }
+
+stage 'Novo'
+ node('master') {
+  println("Nova \"stage\"")
  }
