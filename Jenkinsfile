@@ -1,5 +1,6 @@
 stage 'Checkout'
  node('master') {
+  echo 'Iniciando...'
   deleteDir()
   checkout scm
   fileExists 'testeDeArquivo.txt'
