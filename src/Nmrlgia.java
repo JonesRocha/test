@@ -44,4 +44,5 @@ public class Nmrlgia {
 	public static int numerologiaData(Date data) {
 		return numerologiaAplicada(new SimpleDateFormat("ddMMyyyy").format(data));
 	}
+
 }

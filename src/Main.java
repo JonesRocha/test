@@ -7,10 +7,7 @@ public class Main {
 		BigDecimal bd = new BigDecimal("1");
 
 		HashMap<String, String> mapa = new HashMap<>();
-		mapa.put("um", "1");
-		mapa.put("dois", "2");
 		mapa.put("tres", "3");
-		mapa.put("quatro", "4");
 		mapa.put("cinco", "5");
 		mapa.put("seis", "6");
 		mapa.put("sete", "7");
