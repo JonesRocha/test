@@ -32,3 +32,14 @@ stage 'Cria e Valida Arquivo'
   sh 'git push https://JonesRocha:Sextante73!@github.com/JonesRocha/test.git HEAD:master'
   fileExists 'Trismegisto.txt'
  }
+
+stage 'Adição'
+ node('master') {
+  sh 'git checkout master'
+  sh 'git add src'
+  sh 'git config --global user.email "jones_rocha@yahoo.com.br"'
+  sh 'git config --global user.name "JonesRocha"'
+  sh 'git commit -m "outro passo"'
+  sh 'git push https://JonesRocha:Sextante73!@github.com/JonesRocha/test.git HEAD:master'
+  fileExists 'Trismegisto.txt'
+ }
