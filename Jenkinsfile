@@ -69,3 +69,17 @@ stage 'e-mail'
  node('master') {
   emailext body: 'Aqui é um teste.', recipientProviders: [developers()], subject: 'Teste', to: 'jones_rocha@yahoo.com.br'
  }
+
+stage 'Valid'
+ node('master') {
+  echo 'Verifica se existe!'
+  if (fileExists('src/Main.java')) {
+     echo 'Já existe o src/Main.java!'
+  }
+  if (fileExists('src/Nmrlgia.java')) {
+     echo 'Já existe! o src/Nmrlgia.java'
+  }
+  if (fileExists('contributors.txt')) {
+     echo 'o arquivo contributors.txt existe já.'
+  }
+ }
