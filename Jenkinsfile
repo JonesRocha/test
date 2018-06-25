@@ -68,4 +68,6 @@ stage 'Novo'
 stage 'e-mail'
  node('master') {
   emailext body: 'Aqui é um teste.', recipientProviders: [developers()], subject: 'Teste', to: 'jones_rocha@yahoo.com.br'
+ echo 'Vou tentar esse outro esquema de e-mail...'
+ mail bcc: '', body: 'testando', cc: '', from: '', replyTo: '', subject: 'Teste', to: 'jones.rocha@matera.com'
  }
