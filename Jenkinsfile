@@ -51,11 +51,6 @@ stage 'Adição'
   }
  }
 
-stage 'Novo'
- node('master') {
-  println("Nova \"stage\"")
- }
-
 stage 'e-mail'
  node('master') {
   emailext body: 'Aqui é um teste.', recipientProviders: [developers()], subject: 'Teste', to: 'jones_rocha@yahoo.com.br'
