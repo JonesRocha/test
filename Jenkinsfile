@@ -51,15 +51,6 @@ stage 'Adição'
   }
  }
 
-stage 'Mensagem'
- node('master') {
-  echo 'Aqui finaliza por enquanto.'
-  println("Códigos em groove...")
-  for (int i = 1; i <= 9; ++i) {
-    println("Contando... " + i)
-  }
- }
-
 stage 'Novo'
  node('master') {
   println("Nova \"stage\"")
