@@ -1,6 +1,8 @@
 stage 'Checkout'
  node('master') {
   echo 'Iniciando...'
+  notify('Iniciando os esquemas...')
+
   deleteDir()
   checkout scm
   fileExists 'testeDeArquivo.txt'
@@ -68,6 +70,8 @@ stage 'Valid'
   if (fileExists('contributors.txt')) {
      echo 'o arquivo contributors.txt existe já.'
   }
+
+  notify('Finalizado com sucesso!')
  }
 
 pipeline {
@@ -84,4 +88,13 @@ pipeline {
             echo 'I will always say Hello again!'
         }
     }
+}
+
+def notify(status){
+    emailext (
+      to: "jones.rocha@matera.com",
+      subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+      body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+        <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
+    )
 }
