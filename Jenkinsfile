@@ -22,7 +22,7 @@ stage 'Script'
   }
  }
 
-stage 'Cria e Valida Arquivo'
+stage 'Cria e Valida'
  node('master') {
   if (fileExists('Trismegisto.txt')) {
      echo 'Já existe!'
