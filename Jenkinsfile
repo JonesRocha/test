@@ -53,11 +53,6 @@ stage 'Adição'
   }
  }
 
-stage 'e-mail'
- node('master') {
-  emailext body: 'Aqui é um teste.', recipientProviders: [developers()], subject: 'Teste', to: 'jones_rocha@yahoo.com.br'
- }
-
 stage 'Valid'
  node('master') {
   echo 'Verifica se existe!'
