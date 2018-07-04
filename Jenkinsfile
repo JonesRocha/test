@@ -85,7 +85,7 @@ pipeline {
     }
 }
 
-def notify(status){
+def notify(status) {
     emailext (
       to: "jones.rocha@matera.com",
       subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
