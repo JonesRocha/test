@@ -17,7 +17,7 @@ stage 'Mensagem de Teste'
 stage 'Script'
  node('master') {
   script {
-   def browsers = ['chrome', 'firefox', 'opera']
+   def browsers = ['chrome', 'firefox', 'opera', 'netscape']
    for (int i = 0; i < browsers.size(); ++i) {
      echo "Testing the ${browsers[i]} browser"
    }
