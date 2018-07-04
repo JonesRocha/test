@@ -27,7 +27,7 @@ stage 'Script'
 stage 'Cria e Valida'
  node('master') {
   if (fileExists('Trismegisto.txt')) {
-     echo 'Já existe!'
+     echo 'O arquivo Trismegisto.txt já existe!'
   } else {
      sh 'echo "Os lábios da sabedoria estão fechados, exceto aos ouvidos do entendimento." > Trismegisto.txt'
      sh 'git checkout master'
@@ -42,7 +42,7 @@ stage 'Cria e Valida'
 stage 'Adição'
  node('master') {
   if (fileExists('src')) {
-     echo 'Já existe!'
+     echo 'O diretório "src" já existe!'
   } else {
      sh 'git checkout master'
      sh 'git add src'
